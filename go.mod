@@ -1,3 +1,3 @@
-module github.com/luviz/simple-go-tools/logger
+module github.com/luviz/logger
 
 go 1.22.3

@@ -3,7 +3,7 @@ package logger_test
 import (
 	"testing"
 
-	"github.com/luviz/simple-go-tools/logger"
+	"github.com/luviz/logger"
 )
 
 func TestLoggerSTDOUT(t *testing.T) {
