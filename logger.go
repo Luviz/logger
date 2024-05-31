@@ -1,7 +1,6 @@
 package logger
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -50,14 +49,4 @@ func (logger Logger) ListLogHandlers() []string {
 		res = append(res, s.Info())
 	}
 	return res
-}
-
-func GetCSVLogHeader() string {
-	return "timestamp;level;value;message;source"
-}
-
-func GetCSVLogEvent(l Log) string {
-	return fmt.Sprintf("{%v};{%v};{%v};{%v};{%v}",
-		l.timestamp, l.logLevel, l.value, l.message, l.source,
-	)
 }

@@ -22,3 +22,13 @@ func TestLoggerSTDOUT(t *testing.T) {
 	log.LogEvent(logger.Waring, "Hello world", "test")
 	log.LogEvent(logger.Error, "Hello world", "test")
 }
+
+func TestCSVHandler(t *testing.T) {
+	log := logger.NewLogger(map[string]string{
+		"env": "Test",
+	})
+	csv := logger.NewCSVHandler("csv", "./tmp/me.log")
+	log.AddLogHandler(csv)
+	log.LogEvent(logger.Trace, "Hello world", "test")
+
+}
